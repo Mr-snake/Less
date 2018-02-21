@@ -1,0 +1,52 @@
+/*会编译*/
+body div:first-of-type h1 {
+  background: #008000;
+}
+body div:nth-child(2) {
+  background: url('../images/p7.webp.jpg');
+}
+.width {
+  color: red;
+  width: 200px;
+}
+/*带选择器的混合(悬浮)*/
+button:hover {
+  border: 1px solid #008000;
+}
+.btn2 {
+  border: 1px solid #ff0000;
+}
+.col-3 {
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  margin: 2px;
+  padding: 2px;
+}
+.col-4 {
+  color: #ffff00;
+  border: 2px solid #ffff00;
+  margin: 3px;
+  padding: 1px;
+}
+.col-5 {
+  color: #ffff00;
+  border: 2px solid #ffff00;
+  margin: 2px;
+  padding: 2px;
+}
+/*@arguments*/
+.col-6 {
+  border: 2px solid #ff0000;
+  width: 200px;
+}
+/*全部及单个混合*/
+.col-7 {
+  border: 2px solid #ff0000;
+  border-radius: 5px;
+  border-bottom-right-radius: 10px;
+}
+/*混合的返回值*/
+.col-8 {
+  padding: 25px;
+  border: 2px solid #ff0000;
+}

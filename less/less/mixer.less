@@ -1,0 +1,85 @@
+@chart:'UTF-8';
+//不会编译
+/*会编译*/
+@green:green;
+body div:first-of-type h1{
+	background:@green;
+}
+@imgUrl:"../images/";
+body div:nth-child(2){
+	background:url('@{imgUrl}p7.webp.jpg');
+}
+@width:width;
+.@{width}{
+	.font_color;
+	@{width}:200px;
+}
+//不带输出的混合，使用括号
+.font_color(){
+	color:red;
+}
+/*带选择器的混合(悬浮)*/
+.miner(){
+	&:hover{
+	  .border(@green);
+	}
+}
+button{
+	.miner();
+}
+//带参数的混合
+.border(@color){
+	border:1px solid @color;
+}
+//带默认参数的混合
+.borderp(@color:red){
+	border:1px solid @color;
+}
+.btn2{
+	.borderp();
+}
+//带多个参数的混合
+.mixer(@padding:2px;@color:red;@margin:2px;){
+     color:@color;
+     border:2px solid @color;
+     margin:@margin;
+     padding:@padding;
+}
+.col-3{
+	.mixer()
+}
+.col-4{
+	.mixer(1px,yellow,3px)
+}
+.col-5{
+	.mixer(@padding:2px;@color:yellow)
+}
+/*@arguments*/ 
+.border1(@line:solid;@color:red){
+      border:2px @arguments;
+};
+.col-6{
+	.border1();
+	width: 200px;
+}
+/*全部及单个混合*/ 
+.border-radius(all,@w:5px){
+    border-radius:@w;
+}
+.border-radius(l_t,@w:5px){
+    border-bottom-right-radius:@w;
+}
+.col-7{
+	.border1();
+	.border-radius(all);
+	.border-radius(l_t,10px);
+}
+/*混合的返回值*/ 
+.average(@w,@h){
+	@average:((@w+@h)/2);
+}
+.col-8{
+	.average(20px,30px);
+	padding:@average;
+	.border1();
+}

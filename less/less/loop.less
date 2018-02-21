@@ -1,0 +1,37 @@
+@chart: "UTF-8";
+/*循环*/ 
+// .loop(@count) when(@count>0){
+//     .loop((@count - 1));
+//     width: (10px*@count);
+//     width: (10px*@count);
+// }
+// div{
+//     .loop(5);
+// }
+.loop(@count) when(@count>0){
+    h@{count}{
+         padding:(10px*@count);
+    }
+    .loop((@count - 1));
+    width: (10px*@count);
+}
+div{
+    .loop(6);
+}
+/*合并 */ 
+/* +合并属性值以后，以逗号分隔 */ 
+.miner(){
+    box-shadow+:0 0 10px insert; 
+}
+div{
+    .miner();
+    box-shadow+:0 0 5px insert; 
+}
+/* +_合并属性值以后，以空格分隔 */ 
+.miner_(){
+    background+_: red;
+}
+div{
+    .miner_();
+    background+_: url('adm/css');
+}

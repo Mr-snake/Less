@@ -1,0 +1,36 @@
+/*循环*/
+div {
+  width: 10px;
+  width: 20px;
+  width: 30px;
+  width: 40px;
+  width: 50px;
+  width: 60px;
+}
+div h6 {
+  padding: 60px;
+}
+div h5 {
+  padding: 50px;
+}
+div h4 {
+  padding: 40px;
+}
+div h3 {
+  padding: 30px;
+}
+div h2 {
+  padding: 20px;
+}
+div h1 {
+  padding: 10px;
+}
+/*合并 */
+/* +合并属性值以后，以逗号分隔 */
+div {
+  box-shadow: 0 0 10px insert, 0 0 5px insert;
+}
+/* +_合并属性值以后，以空格分隔 */
+div {
+  background: red url('adm/css');
+}

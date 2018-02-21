@@ -1,0 +1,11 @@
+@chart:'UTF-8';
+/*reference引入但不进行输出*/ 
+// @import (reference) "insert.less";
+/*inline引入但不进行操作*/ 
+// @import (inline) "insert.less";
+.miner(@padding:2px){
+    border:@padding solid red;
+}
+ header div{
+    .miner() !important;
+}

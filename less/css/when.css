@@ -1,0 +1,23 @@
+/*类型检查函数*/
+/*单位检查函数*/
+.a {
+  background: green;
+}
+.b {
+  background: pink;
+}
+.c {
+  background: green;
+  background: yellow;
+  width: 960px;
+}
+.d {
+  background: green;
+  background: skyblue;
+  width: 50%;
+}
+.e {
+  background: green;
+  background: #0f0022;
+  font-size: 5em;
+}

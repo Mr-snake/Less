@@ -1,0 +1,17 @@
+@chart:'UTF-8';
+header{
+    background: #ddd;
+    div{
+        width: 200px;
+        /*&所有父元素选择器*/ 
+        &:hover{
+            background: green;
+        }
+        .c & .a .b{
+            border:1px solid #ddd;
+        }
+    }
+}
+.miner(@padding:2px){
+    border:@padding solid red;
+}

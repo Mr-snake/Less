@@ -1,0 +1,36 @@
+@chart:'UTF-8';
+/*类型检查函数*/ 
+.miner(@a) when (isnumber(@a)){
+    background: green;
+}
+.miner(@a) when (iscolor(@a)){
+    background: pink;
+}
+/*单位检查函数*/ 
+.miner(@a) when (ispixel(@a)){
+    background: yellow;
+    width: @a;
+}
+.miner(@a) when (ispercentage(@a)){
+    background: skyblue;
+    width: @a;
+}
+.miner(@a) when (isem(@a)){
+    background: #0f0022;
+    font-size: @a;
+}
+.a{
+    .miner(123)
+}
+.b{
+    .miner(#ff0000)
+}
+.c{
+    .miner(960px)
+}
+.d{
+    .miner(50%)
+}
+.e{
+    .miner(5em)
+}

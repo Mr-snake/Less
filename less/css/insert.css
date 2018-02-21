@@ -1,0 +1,13 @@
+header {
+  background: #ddd;
+}
+header div {
+  width: 200px;
+  /*&所有父元素选择器*/
+}
+header div:hover {
+  background: green;
+}
+.c header div .a .b {
+  border: 1px solid #ddd;
+}
